@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/difficultyText"
+        android:text="EASY"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <View
+        android:id="@+id/seperator"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/seperator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridSizeText"
+        android:text="10X10 Grid"
+        android:textColor="#000000"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/gridSizeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wordAmountText"
+        android:text="6 Words"
+        android:textColor="#000000"/>
+</android.support.constraint.ConstraintLayout>

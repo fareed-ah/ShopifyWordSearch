@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Word Search"
+        android:textColor="#FFF"
+        android:id="@+id/introText"
+        android:textSize="28dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/difficultyList"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/difficultyList"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/introText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:onClick="onEasyClicked"
+            android:background="#76FF03">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/easyDifficultyText"
+                android:text="EASY"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+
+            <View
+                android:id="@+id/easySeperator"
+                app:layout_constraintTop_toBottomOf="@+id/easyDifficultyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/easySeperator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/easyGridSizeText"
+                android:text="10X10 Grid"
+                android:textColor="#000000"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/easyGridSizeText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/easyWordAmountText"
+                android:text="6 Words"
+                android:textColor="#000000"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:onClick="onMediumClicked"
+            android:background="#FFEA00">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mediumDifficultyText"
+                android:text="MEDIUM"
+                android:textSize="20dp"
+                android:textColor="#000000"/>
+
+            <View
+                android:id="@+id/mediumSeperator"
+                app:layout_constraintTop_toBottomOf="@+id/mediumDifficultyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/mediumSeperator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mediumGridSizeText"
+                android:text="15X15 Grid"
+                android:textColor="#000000"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/mediumGridSizeText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mediumWordAmountText"
+                android:text="8 Words"
+                android:textColor="#000000"/>
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:onClick="onHardClicked"
+            android:background="#FF3D00">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hardDifficultyText"
+                android:text="HARD"
+                android:textSize="20dp"
+                android:textColor="#000000"/>
+
+            <View
+                android:id="@+id/hardSeperator"
+                app:layout_constraintTop_toBottomOf="@+id/hardDifficultyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/hardSeperator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hardGridSizeText"
+                android:text="20X20 Grid"
+                android:textColor="#000000"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/hardGridSizeText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hardWordAmountText"
+                android:text="10 Words"
+                android:textColor="#000000"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
